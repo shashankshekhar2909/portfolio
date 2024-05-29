@@ -1,0 +1,118 @@
+.ezy__header34_V5wL6gbG {
+  /* Bootstrap variables */
+  --bs-body-bg: rgb(255, 255, 255);
+  --bs-body-bg-invert: rgb(246, 246, 246);
+
+  /* Easy Frontend variables */
+  --ezy-theme-color: rgb(13, 110, 253);
+  --ezy-theme-color-rgb: 13, 110, 253;
+  --ezy-body-color-invert: rgb(246, 246, 246);
+
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  overflow: hidden;
+  position: relative;
+  padding: 60px 0 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .ezy__header34_V5wL6gbG {
+    padding: 100px 0 0;
+  }
+}
+
+/* Gray Block Style */
+.gray .ezy__header34_V5wL6gbG,
+.ezy__header34_V5wL6gbG.gray {
+  /* Bootstrap variables */
+  --bs-body-bg: rgb(246, 246, 246);
+
+  /* Easy Frontend variables */
+  --ezy-body-color-invert: rgb(255, 255, 255);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .ezy__header34_V5wL6gbG,
+.ezy__header34_V5wL6gbG.dark-gray {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(30, 39, 53);
+
+  /* Easy Frontend variables */
+  --ezy-body-color-invert: rgb(11, 23, 39);
+}
+
+/* Dark Block Style */
+.dark .ezy__header34_V5wL6gbG,
+.ezy__header34_V5wL6gbG.dark {
+  /* Bootstrap variables */
+  --bs-body-color: #ffffff;
+  --bs-body-bg: rgb(11, 23, 39);
+
+  /* Easy Frontend variables */
+  --ezy-body-color-invert: rgb(30, 39, 53);
+}
+
+.ezy__header34_V5wL6gbG-heading {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 991px) {
+  .ezy__header34_V5wL6gbG-heading {
+    font-size: 70px;
+  }
+}
+
+.ezy__header34_V5wL6gbG-sub-heading {
+  font-size: 17px;
+  line-height: 1.8;
+  opacity: 0.8;
+}
+
+.ezy__header34_V5wL6gbG-shape-two {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.ezy__header34_V5wL6gbG-shape-four {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.ezy__header34_V5wL6gbG-shape-six {
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+/* form */
+.ezy__header34_V5wL6gbG .form-control {
+  min-height: 62px;
+  line-height: 26px;
+  border: none;
+  background: var(--ezy-body-color-invert);
+  z-index: 1;
+}
+.ezy__header34_V5wL6gbG .form-control:focus {
+  z-index: 1;
+}
+.ezy__header34_V5wL6gbG-btn {
+  position: absolute !important;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 30px;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--ezy-theme-color);
+  z-index: 100;
+}
+.ezy__header34_V5wL6gbG-btn:hover {
+  color: #fff;
+  background-color: rgba(var(--ezy-theme-color-rgb));
+}

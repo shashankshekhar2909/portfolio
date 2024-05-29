@@ -1,0 +1,137 @@
+<!-- {{products|json}} -->
+<section class="ezy__epgrid12_LKXyDDfm">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-3">
+        <!-- sidebar -->
+        <div class="ezy__epgrid12_LKXyDDfm-sidebar p-3 p-lg-4 mt-4">
+          <form>
+            <div class="ezy__epgrid12_LKXyDDfm-filter-content">
+              <h5 class="mt-4">Sort By</h5>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="epgrid12-sort1" />
+                <label class="form-check-label" for="epgrid12-sort1"> Default </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="epgrid12-sort2" checked />
+                <label class="form-check-label" for="epgrid12-sort2"> Popularity </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="epgrid12-sort3" />
+                <label class="form-check-label" for="epgrid12-sort3"> Average rating </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="epgrid12-sort4" />
+                <label class="form-check-label" for="epgrid12-sort4"> Newness </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="epgrid12-sort5" />
+                <label class="form-check-label" for="epgrid12-sort5"> Price: Low to High </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="epgrid12-sort6" />
+                <label class="form-check-label" for="epgrid12-sort6"> Price: High to Low </label>
+              </div>
+            </div>
+
+            <hr class="ezy__epgrid12_LKXyDDfm-divider my-4" />
+
+            <div class="ezy__epgrid12_LKXyDDfm-filter-content">
+              <h5 class="mt-4 mb-3">Price</h5>
+              <div class="d-flex align-items-center justify-content-center">
+                <div>
+                  <select class="form-select">
+                    <option selected>Min Price</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="mx-2"><p class="mb-0 text-nowrap">--</p></div>
+                <div>
+                  <select class="form-select">
+                    <option selected>Max Price</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <hr class="ezy__epgrid12_LKXyDDfm-divider my-4" />
+
+            <div class="ezy__epgrid12_LKXyDDfm-filter-content">
+              <h5 class="mt-4">Color</h5>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioColor" id="epgrid12-color1" />
+                <label class="form-check-label" for="epgrid12-color1"> Blue </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioColor" id="epgrid12-color2" checked />
+                <label class="form-check-label" for="epgrid12-color2"> Brown </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioColor" id="epgrid12-color3" />
+                <label class="form-check-label" for="epgrid12-color3"> Grey </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioColor" id="epgrid12-color4" />
+                <label class="form-check-label" for="epgrid12-color4"> Green </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioColor" id="epgrid12-color5" />
+                <label class="form-check-label" for="epgrid12-color5"> Orange </label>
+              </div>
+              <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioColor" id="epgrid12-color6" />
+                <label class="form-check-label" for="epgrid12-color6"> White </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-12 col-lg-9">
+        <div class="row">
+          <!-- item -->
+          <div class="col-12 col-md-6 col-xxl-4 mt-4" *ngFor="let product of products">
+            <div class="ezy__epgrid12_LKXyDDfm-item p-3 pb-0">
+              <div class="ezy__epgrid12_LKXyDDfm-img position-relative p-5 w-100">
+                <h6 class="ezy__epgrid12_LKXyDDfm-item-badge px-4 py-2 mb-0">New</h6>
+                <div class="ezy__epgrid12_LKXyDDfm-fav-icon">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <img src="{{product.images[0]}}" alt="" class="img-fluid" />
+              </div>
+              <div class="ezy__epgrid12_LKXyDDfm-content py-4 px-1">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <a href="#!"><h6 class="mb-1">Baby Truck</h6></a>
+                    <span class="ezy__epgrid12_LKXyDDfm-rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </span>
+                  </div>
+                  <div>
+                    <p class="mb-0 fs-3 fw-bold">$676</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item -->
+          <div class="col-12 mt-5">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-5">
+                <button class="btn ezy__epgrid12_LKXyDDfm-btn w-100 fw-bold">Load More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

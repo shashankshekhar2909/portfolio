@@ -1,1 +1,379 @@
-<p>product-detail works!</p>
+<section class="ezy__epoverview4_nqxoy480" id="ezy__epoverview4_nqxoy480" *ngIf="productDetails">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/catalog/list">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{productDetails.title}}</li>
+      </ol>
+    </nav>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="ezy__epoverview4_nqxoy480-card p-3 p-sm-4 p-lg-5 me-lg-4">
+          <div class="text-center mb-3 p-md-4">
+            <img
+              src="{{mainImage}}"
+              alt=""
+              class="img-fluid w-100"
+            />
+          </div>
+
+          <ul class="nav ezy__epoverview4_nqxoy480-gallery">
+            <a (click)="changeMainImage(item)" *ngFor="let item of images">
+              <li>
+                <img
+                  src="{{item}}"
+                  alt=""
+                  class="img-fluid"
+                />
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-4">
+        <div class="mb-4 pb-lg-2">
+          <h1 class="ezy__epoverview4_nqxoy480-heading mb-3">{{productDetails.title}}</h1>
+          <p class="ezy__epoverview4_nqxoy480-content mb-4">
+            <span>{{productDetails.brand}}</span> <i class="fas fa-star mx-2"></i>
+            <a href="#!" class="ezy__epoverview4_nqxoy480-review ms-1">{{productDetails.rating}} Rating</a> <span class="ms-2">87 Order</span>
+          </p>
+          <div class="row my-4">
+            <div class="col-12 col-lg-10 col-xl-8">
+              <p class="ezy__epoverview4_nqxoy480-content mb-0">
+                {{productDetails.description}}
+              </p>
+            </div>
+          </div>
+          <h3 class="ezy__epoverview4_nqxoy480-price fw-bold mb-0">${{productDetails.price}}</h3>
+        </div>
+
+        <form action="#!">
+          <div class="mb-4" *ngIf="productDetails.color">
+            <h5 class="ezy__epoverview4_nqxoy480-title mb-2">Color</h5>
+            <div
+              class="btn-group ezy__epoverview4_nqxoy480-radios d-block mb-2"
+              role="group"
+              aria-label="Basic radio toggle button group"
+            >
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-color"
+                id="ezy__epoverview4_nqxoy480-color1"
+                autocomplete="off"
+                checked
+              />
+              <label
+                class="btn me-1 mt-1"
+                style="--ezy-product-color: #ffc107"
+                for="ezy__epoverview4_nqxoy480-color1"
+              ></label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-color"
+                id="ezy__epoverview4_nqxoy480-color2"
+                autocomplete="off"
+              />
+              <label
+                class="btn me-1 mt-1"
+                style="--ezy-product-color: #3aa9f3"
+                for="ezy__epoverview4_nqxoy480-color2"
+              ></label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-color"
+                id="ezy__epoverview4_nqxoy480-color3"
+                autocomplete="off"
+              />
+              <label
+                class="btn me-1 mt-1"
+                style="--ezy-product-color: #ff7171"
+                for="ezy__epoverview4_nqxoy480-color3"
+              ></label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-color"
+                id="ezy__epoverview4_nqxoy480-color4"
+                autocomplete="off"
+              />
+              <label
+                class="btn me-1 mt-1"
+                style="--ezy-product-color: #161d25"
+                for="ezy__epoverview4_nqxoy480-color4"
+              ></label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-color"
+                id="ezy__epoverview4_nqxoy480-color5"
+                autocomplete="off"
+              />
+              <label
+                class="btn me-1 mt-1"
+                style="--ezy-product-color: #ff0000"
+                for="ezy__epoverview4_nqxoy480-color5"
+              ></label>
+            </div>
+          </div>
+          <div class="mb-4">
+            <h5 class="ezy__epoverview4_nqxoy480-title mb-0">Size: <span class="opacity-50">Extra Extra Small</span></h5>
+            <div
+              class="btn-group ezy__epoverview4_nqxoy480-radios d-block mb-2"
+              role="group"
+              aria-label="Basic radio toggle button group"
+            >
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-size"
+                id="ezy__epoverview4_nqxoy480-size1"
+                autocomplete="off"
+                checked
+              />
+              <label class="btn me-2 mt-2 rounded-pill overflow-hidden px-3 py-1" for="ezy__epoverview4_nqxoy480-size1">
+                XXS
+              </label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-size"
+                id="ezy__epoverview4_nqxoy480-size2"
+                autocomplete="off"
+              />
+              <label class="btn me-2 mt-2 rounded-pill overflow-hidden px-3 py-1" for="ezy__epoverview4_nqxoy480-size2">
+                XS
+              </label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-size"
+                id="ezy__epoverview4_nqxoy480-size3"
+                autocomplete="off"
+              />
+              <label class="btn me-2 mt-2 rounded-pill overflow-hidden px-3 py-1" for="ezy__epoverview4_nqxoy480-size3">
+                S
+              </label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-size"
+                id="ezy__epoverview4_nqxoy480-size4"
+                autocomplete="off"
+              />
+              <label class="btn me-2 mt-2 rounded-pill overflow-hidden px-3 py-1" for="ezy__epoverview4_nqxoy480-size4">
+                M
+              </label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-size"
+                id="ezy__epoverview4_nqxoy480-size5"
+                autocomplete="off"
+              />
+              <label class="btn me-2 mt-2 rounded-pill overflow-hidden px-3 py-1" for="ezy__epoverview4_nqxoy480-size5">
+                L
+              </label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-size"
+                id="ezy__epoverview4_nqxoy480-size6"
+                autocomplete="off"
+              />
+              <label class="btn me-2 mt-2 rounded-pill overflow-hidden px-3 py-1" for="ezy__epoverview4_nqxoy480-size6">
+                XL
+              </label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-size"
+                id="ezy__epoverview4_nqxoy480-size7"
+                autocomplete="off"
+              />
+              <label class="btn me-2 mt-2 rounded-pill overflow-hidden px-3 py-1" for="ezy__epoverview4_nqxoy480-size7">
+                XXL
+              </label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="ezy__epoverview4_nqxoy480-size"
+                id="ezy__epoverview4_nqxoy480-size8"
+                autocomplete="off"
+                disabled
+              />
+              <label class="btn me-2 mt-2 rounded-pill overflow-hidden px-3 py-1" for="ezy__epoverview4_nqxoy480-size8">
+                XXXL
+              </label>
+            </div>
+          </div>
+          <div class="mb-4">
+            <h5 class="ezy__epoverview4_nqxoy480-title mb-2">QTY</h5>
+            <div class="input-group ezy__epoverview4_nqxoy480-qty d-inline-flex mb-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder=""
+                value="1"
+                aria-label="Example text with button addon"
+                aria-describedby="button-addon1"
+              />
+              <div class="input-group-text d-flex flex-column bg-transparent p-0">
+                <button class="btn" type="button">-</button>
+                <button class="btn" type="button">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-md-10 d-flex">
+              <button
+                class="btn ezy__epoverview4_nqxoy480-btn text-uppercase d-inline-flex justify-content-center align-items-center px-3 px-sm-5 me-2 me-lg-3 w-100"
+              >
+                Buy Now
+              </button>
+              <button
+                class="btn ezy__epoverview4_nqxoy480-btn-outline text-uppercase bg-transparent d-inline-flex justify-content-center align-items-center px-3 px-sm-4 w-100"
+              >
+                Add To Cart
+              </button>
+            </div>
+            <div class="col-12 mt-3">
+              <button
+                class="btn btn-link ezy__epoverview4_nqxoy480-fav d-inline-flex align-items-center text-decoration-none"
+              >
+                <i class="far fa-heart fs-5 me-1"></i> Add to wishlist
+              </button>
+              <button
+                class="btn btn-link ezy__epoverview4_nqxoy480-share d-inline-flex align-items-center text-decoration-none"
+              >
+                <i class="fas fa-share-alt fs-5 me-1"></i> Share
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="ezy__epspecification1_UKWSx10I" id="ezy__epspecification1_UKWSx10I">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card ezy__epspecification1_UKWSx10I-card">
+          <div class="card-body p-md-4">
+            <h5 class="fs-4 fw-bold mb-4">Product Specification</h5>
+
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="nav flex-column">
+                  <li class="mb-2"><span class="opacity-50 me-1">Brand Name:</span> T-WINNERWater</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Resistance Depth:</span> No waterproof</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Origin:</span> CN(Origin)</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Clasp Type:</span> Bracelet Clasp</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Style:</span> Fashion & Casual</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Movement:</span> Mechanical Hand Wind</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Band Length:</span> 21cm</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Case Material:</span> Stainless steel</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Feature:</span> luminous hands</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="nav flex-column">
+                  <li class="mb-2"><span class="opacity-50 me-1">Model Number:</span> S1089-8</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Case Shape:</span> Round</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Band Width:</span> 20mm</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Case Thickness:</span> 13mm</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Dial Window Material Type:</span> Glass</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Boxes & Cases Material:</span> Paper</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Item Type:</span> Mechanical Wristwatches</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Dial Diameter:</span> 40mm</li>
+                  <li class="mb-2"><span class="opacity-50 me-1">Band Material Type:</span> Stainless steel</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="ezy__epreview2_X0P1O7VW" id="ezy__epreview2_X0P1O7VW" *ngIf="productDetails && productDetails.reviews.length>0">
+  <div class="container">
+    <div class="row w-100">
+      <div class="col-12 col-lg-12 col-xl-12">
+        <div class="card ezy__epreview2_X0P1O7VW-card mb-3">
+          <div class="card-body p-md-4">
+            <div class="d-flex justify-content-between">
+              <h2 class="fs-4">Customer Review</h2>
+              <div>
+                <button class="btn ezy__epreview2_X0P1O7VW-btn-outline py-1 px-md-4">New Comment</button>
+              </div>
+            </div>
+            <hr class="ezy__epreview2_X0P1O7VW-hr my-3" />
+            <div class="row" *ngFor="let review of productDetails.reviews">
+              <div class="col-lg-4">
+                <div class="d-flex mb-4">
+                  <div class="ezy__epreview2_X0P1O7VW-profile rounded-circle me-2 overflow-hidden">
+                    <img src="https://cdn.easyfrontend.com/pictures/users/user8.jpg" alt="" class="img-fluid" />
+                  </div>
+                  <div>
+                    <h5 class="fs-6 mb-1 mt-1">{{review.reviewerName}}</h5>
+                    <p class="ezy__epreview2_X0P1O7VW-content fw-light mb-3">
+                      <span class="ezy__epreview2_X0P1O7VW-rating"  style="color: red;">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </span>
+                      <span class="mx-1">{{review.rating}}</span>
+                    </p>
+                    <p class="ezy__epreview2_X0P1O7VW-content opacity-50 mb-0">Comment At</p>
+                    <p class="fw-bold mb-0">{{review.date|date}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <p class="ezy__epreview2_X0P1O7VW-content opacity-75 mb-4">
+                  {{review.comment}}
+                </p>
+                <!-- <div class="d-flex justify-content-end">
+                  <button
+                    class="btn ezy__epreview2_X0P1O7VW-btn-text py-0 d-inline-flex justify-content-center align-items-center text-decoration-none me-4"
+                  >
+                    <i class="far fa-thumbs-up fs-6 me-2"></i> Like (20)
+                  </button>
+                  <button
+                    class="btn ezy__epreview2_X0P1O7VW-btn-text py-0 d-inline-flex justify-content-center align-items-center text-decoration-none"
+                  >
+                    <i class="far fa-thumbs-down fs-6 me-2"></i> Dislike (6)
+                  </button>
+                </div> -->
+              </div>
+            </div>
+            <hr class="ezy__epreview2_X0P1O7VW-hr my-3" />
+          </div>
+          <div class="card-body py-4 py-lg-5 text-center">
+            <button class="btn ezy__epreview2_X0P1O7VW-btn px-4 px-md-5">Load More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

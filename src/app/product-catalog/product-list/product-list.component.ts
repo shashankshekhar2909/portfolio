@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ProductCatalogService } from '../product-catalog.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +13,10 @@ export class ProductListComponent implements OnInit{
   products:any = [];
   options: string[] = ['One', 'Two', 'Three'];
   filteredOptions!:any;
-  constructor(private dataService: ProductCatalogService){}
+  constructor(
+    private dataService: ProductCatalogService,
+    private router:Router
+  ){}
   ngOnInit() {
     this.getAllData();
   }
@@ -28,5 +32,11 @@ export class ProductListComponent implements OnInit{
       console.error('Error fetching products', error);
       throw error;
     }
+  }
+
+  goToDetails(id:any){
+    console.log(id);
+    this.router.navigate(['/catalog/details',id])
+
   }
 }

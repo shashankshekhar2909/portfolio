@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SearchComponent } from './search/search.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,11 @@ const routes: Routes = [
     path:'list',
     component:ProductListComponent,
     title:'Product List'
+  },
+  {
+    path:'details/:id',
+    component:ProductDetailComponent,
+    title:'Product Details'
   }
 ];
 

@@ -14,6 +14,9 @@ export class ProductCatalogService {
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+  getProductsDetails(id:any): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl+'/'+id);
+  }
 
   getanyById(id: number): Observable<any> {
     const url = `${this.apiUrl}/${id}`;
